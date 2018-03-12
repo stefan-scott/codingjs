@@ -65,6 +65,10 @@ $(document).ready(() => {
     });
   }
 
+  if (exercise.hint != undefined) {
+    $('#hint').css('visibility','visible');
+  }
+
   // show solution button if already solved
   // if (localStorage.getItem(exerciseName) === "true") {
   //   $('#show').css('visibility','visible');
@@ -164,6 +168,13 @@ $(document).ready(() => {
 
   $('#open').on('click', () => {
     loadCodeFile();
+  })
+
+  $('#hint').on('click', () => {
+    $('.congrats').text("");
+    $('th').remove();
+    let theHint = exercise.hint;
+    $('#hintArea').text(theHint);
   })
 
   // $('#show').on('click', () => {

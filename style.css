@@ -78,6 +78,11 @@ div.probField {
   float:right;
 }
 
+#hint {
+  width: auto;
+  float:right;
+}
+
 .floatBox {
   float: left;
 }
@@ -104,6 +109,16 @@ div#displayResults {
     position: absolute;
     top: 200px;
     margin-left: 600px;
+}
+
+#hintContainer {
+  padding-left: 150px;
+}
+
+#hintArea {
+	height: auto;
+  font-size: 12px;
+  font-family: "Courier New", Courier, monospace;
 }
 
 .test-table {

@@ -11,6 +11,21 @@ exercises.push(
       '(false, true)',
       '(false, false)',
     ],
+    hint: `function sleepIn(weekday, vacation) {
+  if (!weekday || vacation) {
+    return true;
+  }
+
+  return false;
+
+  // Solution notes: better to write "vacation" than "vacation == true"
+  // though they mean exactly the same thing.
+  // Likewise "!weekday" is better than "weekday == false".
+  // Here we just put the "return false;" last, or could use an if/else.
+
+  // This all can be shortened to:
+  //    return (!weekday || vacation);
+}`
   }, {
     title: 'Warmup-1',
     name: 'monkeyTrouble',
