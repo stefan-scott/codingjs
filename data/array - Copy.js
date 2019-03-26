@@ -455,20 +455,20 @@ exercises.push(
     title: 'Array-2',
     name: 'findTheMedian',
     inputs: [
-      "([4,9,9,2,1,5])",
-      "([1, 5, 3, 1 , 5])",
-      "([10, 12, 15])",
+      "([99, 98, 97, 96, 95])",
+      "([2, 2, 0])",
+      "([1, 3, 5])",
       "([5])",
       "([11, 9, 0, 1])",
-      "([-1, 11, -2, 10, -3, 15])",
-      "([2, 10, 15, 13])",
+      "([2, 11, 9, 0])",
+      "([2])",
       "([2, 5, -12])",
     ],
     
     question: `Write a method that returns the median value of an array. The input array will never be empty.
     \nIf the array is odd in length, the median is the value in the centre of the array.\
     \nIf the array is even, the median should be the average of the two middle values. \n 
-    Hint: You will need to ensure the input array is sorted - there is a sort() array method you can use for this step.`
+    Hint: You will need to ensure the input array is sorted - there is a sort() array method you can use for this step.'
   },
   {
     title: 'Array-2',
@@ -1478,7 +1478,7 @@ solutions.fix23 = function (nums) {
 
 solutions.findTheMedian = function (nums) {
   if (nums.length % 2 === 1){
-    return nums[(nums.length-1)/2];
+    return nums[int(nums.length/2)];
   }
   else{
     return (nums[nums.length/2-1] + nums[nums.length/2])/2;
