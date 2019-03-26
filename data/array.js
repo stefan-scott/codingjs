@@ -436,6 +436,23 @@ exercises.push(
   },
   {
     title: 'Array-2',
+    name: 'prependSum',
+    inputs: [
+      "([1, 2, 4, 4])",
+      "([3, 3, 0])",
+      "([1, 1, 1, 1, 1])",
+      "([5, 7])",
+      "([0, 0, 0, 0])",
+      "([12, 13, 19, 20])",
+      "([-2, 2, -2, 2])",
+      "([5, 4, 3, 2, 1, 0])",
+    ],
+    
+    question: `Return a modified version of the input array (nums), where the first two items have been removed
+    and one item – the sum of those two items - is added to the start of the array.`
+  },
+  {
+    title: 'Array-2',
     name: 'findLowestIndex',
     inputs: [
       "([99, 98, 97, 96, 95])",
@@ -1743,6 +1760,13 @@ solutions.fizzArray = function (n) {
     }
     return newA;
 }
+
+solutions.prependSum = function (nums) {
+  nums.unshift(nums.shift() + nums.shift());
+  return nums;
+}
+
+
 
 solutions.only14 = function (nums) {
 
